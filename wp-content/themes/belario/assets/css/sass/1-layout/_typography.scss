@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bonheur+Royale&display=swap');
+
+@font-face {
+    font-family: 'The Bystander Sans Light';
+    src: url('../lib/fonts/BystanderSans-Light.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'The Bystander Sans Regular';
+    src: url('../lib/fonts/BystanderSans-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'The Bystander Serif Bold';
+    src: url('../lib/fonts/BystanderSerif-Bold.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'The Bystander Serif Regular';
+    src: url('../lib/fonts/BystanderSerif-Regular.ttf') format('truetype');
+}
+
+// Fonts
+$bebas: 'Bebas Neue', cursive;
+$bonheur: 'Bonheur Royale', cursive;
+$bystander300: 'The Bystander Sans Light', sans-serif;
+$bystander400: 'The Bystander Sans Regular', sans-serif;
+$bystanderSe400: 'The Bystander Serif Regular', serif;
+$bystanderSe700: 'The Bystander Serif Bold', serif;

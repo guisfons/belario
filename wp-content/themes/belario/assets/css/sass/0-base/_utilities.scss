@@ -1,0 +1,74 @@
+/* Base com definições globais */
+
+/* == 1: Responsivo */
+
+$screen-small: 500px;
+$screen-tablet: 600px;
+$screen-medium: 1024px;
+$screen-large: 1400px;
+
+// Small devices (767px-)
+@mixin xs {
+    @media (max-width: #{$screen-small}) {
+        @content;
+    }
+}
+
+// Medium devices (768px-)
+@mixin sm {
+    @media (max-width: #{$screen-tablet}) {
+        @content;
+    }
+}
+
+// Large devices (1024px-)
+@mixin md {
+    @media (max-width: #{$screen-medium}) {
+        @content;
+    }
+}
+
+// Extra large devices (1400px-)
+@mixin lg {
+    @media (max-width: #{$screen-large}) {
+        @content;
+    }
+}
+
+// Tamanho livre
+@mixin mq($screen) {
+    @media (min-width: $screen+"px") {
+        @content;
+    }
+}
+
+@mixin mqMax($screen) {
+    @media (max-width: $screen+"px") {
+        @content;
+    }
+}
+
+@mixin flex {
+    display: flex;
+}
+
+@mixin flexWrap {
+    @include flex;
+    flex-wrap: wrap;
+}
+
+@mixin flexColumn {
+    @include flex;
+    flex-direction: column;
+}
+
+@mixin flexEnd {
+    @include flex;
+    justify-content: flex-end;
+}
+
+@mixin flexCenter {
+    @include flex;
+    justify-content: center;
+    align-items: center;
+}

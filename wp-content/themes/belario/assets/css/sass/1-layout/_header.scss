@@ -1,0 +1,134 @@
+header {
+    background-image: url($path-image+'header-bg1.svg');
+    background-size: cover;
+    background-position: bottom center;
+    height: 17vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+
+    display: flex;
+
+    @include sm {    
+        height: 33.1px;
+    }
+
+    &::after {
+        content: '';
+        background-image: url($path-image+'header-bg2.svg');
+        background-position: bottom;
+        background-repeat: no-repeat;
+        height: 17vh;
+        width: 100%;
+
+        position: absolute;
+        top: .6rem;
+        left: 0;
+        z-index: 2;
+
+        @include sm {    
+            height: 33.1px;
+            top: 5px;
+            background-size: 100%;
+        }
+    }
+
+    .menu-mobile {
+        display: none;
+        
+        max-width: 23.71px;
+        width: 100%;
+        margin-left: auto;
+
+        position: relative;
+        z-index: 4;
+
+        label {
+            height: 100%;
+            width: 100%;
+            display: block;
+        }
+
+        @include sm {
+            display: block;
+        }
+    }
+
+    h1 {
+        font-size: 0;
+    }
+
+    .menu {
+        position: relative;
+        z-index: 3;
+
+        @include flexEnd;
+        align-items: center;
+
+        @include sm {
+            overflow: hidden;
+            position: fixed;
+            left: 0;
+            top: 0;
+
+            opacity: 0;
+            height: 0%;
+            width: 100%;
+
+            transition: .3s all;
+            background-color: $marrom;
+
+            @include flexColumn;
+            justify-content: center;
+
+        }
+
+        &-input {
+            display: none;
+
+            &:checked ~ .menu {
+                height: 100%;
+                opacity: 1;
+                transition: .3s all;
+            }
+        }
+
+        a {
+            color: $laranja;
+            font-family: $bystanderSe400;
+            font-size: 4.166rem;
+            line-height: 4.166rem;
+
+            transition: .3s ease-in-out;
+
+            @include sm {
+                font-size: 35px;
+                line-height: 35px;
+            }
+
+            &:hover {
+                color: $vermelho;
+            }
+
+            &:not(:last-of-type) {
+                margin-right: 6.5rem;
+
+                @include sm {
+                    margin-right: 0;
+                }
+            }
+
+            &.menu__logo {
+                max-width: 30rem;
+                width: 100%;
+                margin-right: auto;
+
+                @include sm {
+                    display: none;
+                }
+            }
+        }
+    }    
+}

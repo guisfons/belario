@@ -1,0 +1,86 @@
+footer {
+    background-color: $marrom;
+    
+    font-family: $bystander300;
+    font-size: 3rem;
+    line-height: 3.6rem;
+    
+    color: $laranja;
+    position: relative;
+    margin-top: 9rem;
+
+    @include sm {
+        font-size: 10px;
+        line-height: 12px;
+    }
+
+    &::before {
+        content: '';
+        background-image: url($path-image+'borda-footer.svg');
+        height: 12.3rem;
+        width: 100%;
+        display: block;
+        z-index: 3;
+
+        @include sm {
+            background-size: cover;
+            height: 43px;
+        }
+    }
+
+    .footer {
+        display: flex;
+        justify-content: space-between;
+        padding: 10.6rem 0 12.75rem;
+
+        @include sm {
+            flex-direction: column;
+            padding: 60px 0 10px
+        }
+        
+        & div {
+            @include flexColumn;
+
+            address {
+                font-style: normal;
+            }
+
+            span {
+                font-family: $bystanderSe400;
+                font-size: 4rem;
+
+                margin-bottom: 2.662rem;
+
+                @include sm {
+                    font-size: 15px;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+
+        &__endereco {
+            p {
+                margin-top: 4.325rem;
+            }
+        }
+
+        &__horario {
+            @include sm {
+                margin: 10px 0;
+            }
+        }
+    }
+
+    .copyright {
+        display: block;
+        padding: 4.7179rem 0 2.161rem;
+        text-align: center;
+
+        @include sm {
+            font-size: 9.28px;
+            line-height: 11.3px;
+
+            padding: 25px 0 5px;
+        }
+    }
+}

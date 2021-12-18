@@ -1,0 +1,277 @@
+.landing {
+    &__bg {
+        position: relative;
+        height: 100vh;
+
+        &::after {
+            content: '';
+            background-image: url($path-image+'borda-top-home.svg');
+            background-size: cover;
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+
+            height: 14vh;
+            width: 100%;
+
+            @include sm {
+                background-position: bottom center;
+                height: 40px;
+            }
+        }
+
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        &--slider {
+            height: 100vh;
+        }
+
+        &--title {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-image: url($path-image+'bg-intro.svg');
+            background-repeat: no-repeat;
+            background-position: center center;
+                    
+            width: 50vw;
+            height: 40vh;
+
+            @include flexColumn;
+            justify-content: center;
+            align-items: center;
+
+            @include sm {
+                max-width: 320px;
+                width: 90%;
+            }
+
+            h1 {
+                font-family: $bonheur;
+                font-size: 21.796rem;
+                font-weight: 400;
+                color: $vinho;
+                text-align: center;
+                line-height: 17.155rem;
+
+                @include sm {
+                    font-size: 80.77px;
+                    line-height: 57px;
+                }
+
+                span {
+                    font-family: $bebas;
+                    font-size: 7.95rem;
+                    color: $bege;
+                    line-height: 11.527rem;
+                    letter-spacing: 2.7rem;
+
+                    @include sm {
+                        font-size: 29.46px;
+                        line-height: 42.72px;
+                        letter-spacing: 7px;
+                    }
+                }
+            }
+
+            & img {
+                max-width: 52.766rem;
+                height: 3.767rem;
+
+                @include sm {
+                    max-width: 195px;
+                    height: 13px;
+                }
+            }
+
+            & > span {
+                font-family: $bonheur;
+                font-weight: 400;
+                font-size: 10rem;
+                color: $laranja;
+
+                @include sm {
+                    font-size: 37px;
+                }
+            }
+        }
+    }
+}
+
+.servicos {
+    &__title {
+        font-family: $bystanderSe700;
+        font-size: 13.145rem;
+        letter-spacing: -.1rem;
+        color: $vinho;
+        text-align: center;
+        position: relative;
+        z-index: 1;
+        
+        margin-top: 10rem;
+
+        @include sm {
+            font-size: 35px;
+        }
+
+        &::after {
+            content: '';
+            background-image: url($path-image+'bg-servicos.svg');
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+
+            position: absolute;
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: block;
+
+            width: 100%;
+            height: 25.9rem;
+            z-index: -1;
+
+            @include sm {
+                height: 77.9px;
+            }
+        }
+    }
+
+    &__list {
+        margin-top: 15rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+
+        article {
+            max-width: 100rem;
+            width: 100%;
+            margin: 0 auto;
+
+            @include flexColumn;
+
+            @include sm {
+                margin-top: 20px;
+            }
+
+            &:nth-of-type(2n) {
+                margin-top: 27rem;
+
+                @include sm {
+                    margin-top: 20px;
+                }
+            }
+
+            &:nth-of-type(n+3){
+                h2 {
+                    text-align: right;
+
+                    @include sm {
+                        text-align: left;
+                    }
+
+                    &::after {
+                        right: 0;
+                        left: initial;
+
+                        @include sm {
+                            right: initial;
+                            left: 0;
+                        }
+                    }
+                }
+
+                p {
+                    text-align-last: right;
+
+                    @include sm {
+                        text-align-last: left;
+                    }
+                }
+            }
+
+            h2 {
+                font-family: $bystanderSe400;
+                font-size: 9.4rem;
+                color: $marrom;
+                position: relative;
+
+                @include sm {
+                    font-size: 27px;
+                }
+    
+                &::after {
+                    content: '';
+                    max-width: 60.2rem;
+                    width: 100%;
+                    height: .4rem;
+                    background-color: $vinho;
+                    position: absolute;
+                    bottom: -1rem;
+                    left: 0;
+
+                    @include sm {
+                        max-width: 100%;
+                    }
+                }
+
+            }
+
+            p {
+                font-family: $bystander300;
+                font-size: 5rem;
+                line-height: 6rem;
+                margin-top: 9rem;
+                text-align: justify;
+
+                @include sm {
+                    margin-top: 10px;
+                    font-size: 15px;
+                    line-height: 18px;
+                }
+            }
+
+            a {
+                font-family: $bystander400;
+                font-size: 5rem;
+                line-height: 6rem;
+                text-align: right;
+                position: relative;
+
+                width: fit-content;
+                margin-left: auto;
+                margin-top: 3rem;
+
+                @include sm {
+                    margin-top: 0;
+                    font-size: 15px;
+                    line-height: 18px;
+                }
+
+                &::after {
+                    content: '';
+                    width: 0%;
+                    height: .4rem;
+                    background-color: #000;
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                    transition: .3s all;
+                }
+
+                &:hover {
+                    &::after {
+                        content: '';
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
+    }
+}

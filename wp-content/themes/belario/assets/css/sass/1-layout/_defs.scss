@@ -1,0 +1,23 @@
+$wrapperWidth: 1440px;
+
+.wrapper {
+	width: 90%;
+	max-width: $wrapperWidth;
+	margin: auto;
+}
+
+// Cores
+
+$vermelho: #FF0000;
+$vinho: #A53A1D;
+$laranja: #EF8022;
+$marrom: #100405;
+$bege: #F6EAE0;
+$cinza: #8D8681;
+
+body {
+	background-color: $bege;
+}
+
+// path image
+$path-image: '../images/layout/';
