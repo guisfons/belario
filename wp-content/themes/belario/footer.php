@@ -52,6 +52,7 @@
     </footer>
     <script src="<?php echo get_template_directory_uri(); ?>/assets/lib/jquery-3.6.0.min.js"></script>
     <script src="<?php echo get_template_directory_uri(); ?>/assets/lib/jquery.mask.min.js"></script>
+    <script src="<?php echo get_template_directory_uri(); ?>/assets/lib/slick.min.js"></script>
     <script src="<?php echo get_template_directory_uri(); ?>/assets/lib/app.js"></script>
 </body>
 </html>

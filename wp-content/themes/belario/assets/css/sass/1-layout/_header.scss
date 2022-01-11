@@ -132,3 +132,11 @@ header {
         }
     }    
 }
+
+.sobre-nos, .cardapio {
+    header {
+        position: relative;
+        top: initial;
+        left: initial;
+    }
+}

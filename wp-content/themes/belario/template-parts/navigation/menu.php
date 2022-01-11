@@ -1,5 +1,5 @@
 <nav class="menu">
-	<a class="menu__logo" href="/"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.svg" alt=""></a>
+	<a class="menu__logo" href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.svg" alt=""></a>
 	<?php
 		$header_menu = wp_get_nav_menu_items("Menu Header");
 		foreach($header_menu as $key => $menu_item){

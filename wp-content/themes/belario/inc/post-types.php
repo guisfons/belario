@@ -36,35 +36,6 @@ function ks_register_post_types(){
 
     $posttypes = array(
 
-        'cardapio' => array(
-
-            'labels' => array(
-                'name'               => __('Cardápio'),
-                'singular_name'      => __('Cardápio'),
-                'menu_name'          => __('Cardápio'),
-                'name_admin_bar'     => __('cardapio'),
-                'add_new'            => __('Novo Item'),
-                'add_new_item'       => __('Novo Item'),
-                'new_item'           => __('Novo Item'),
-                'edit_item'          => __('Editar Item'),
-                'view_item'          => __('Ver Item'),
-                'all_items'          => __('cardapio'),
-                'search_items'       => __('Procurar por item'),
-                'parent_item_colon'  => __('cardapio pai:'),
-                'not_found'          => __('Nenhum Item encontrado.'),
-                'not_found_in_trash' => __('Nenhum Item encontrado na lixeira.')
-            ),
-            'menu_icon' => 'dashicons-text-page',
-            'description' => __('cardapio'),
-            'rest_base' =>'custom/cardapio',
-            'has_archive' => 'biblioteca/cardapio',
-            'rewrite'     => [
-                'slug' => 'cardapio',
-            ],
-            'supports'    => array('title', 'thumbnail'),
-            'show_in_rest' => false,  // @info inherited from old version
-        ),
-
         'servicos' => array(
 
             'labels' => array(

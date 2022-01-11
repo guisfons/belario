@@ -5,15 +5,13 @@
 <main class="landing landing--front-page">
 	<section class="landing__bg">
         <div class="landing__bg--slider">
-            <?php if( get_field('imagem') ): ?>
-                <img src="<?php the_field('imagem'); ?>" />
-            <?php endif; ?>
-            <?php if( get_field('imagem_2') ): ?>
-                <img src="<?php the_field('imagem_2'); ?>" />
-            <?php endif; ?>
-            <?php if( get_field('imagem_3') ): ?>
-                <img src="<?php the_field('imagem_3'); ?>" />
-            <?php endif; ?>
+        <?php
+        if( have_rows('imagens') ):
+            while( have_rows('imagens') ) : the_row();
+                echo '<img src=' . get_sub_field('imagem') . '>';
+            endwhile;
+        endif;
+        ?>
         </div>
         <div class="landing__bg--title">
             <h1><span>Churrascaria</span><br>Bela Rio</h1>

@@ -1,0 +1,79 @@
+.sobre {
+    min-height: 50vh;
+
+    h2 {
+        text-align: center;
+        font-size: 7rem;
+        color: $vinho;
+        margin: 15rem 0;
+    }
+
+    article {
+        font-family: $roboto;
+        font-size: 5rem;
+
+        ul {
+            list-style: none;
+            margin-left: 2rem;
+
+            li {
+                position: relative;
+                padding-left: 5rem;
+
+                &::before {
+                    content: '';
+                    width: 2rem;
+                    height: 2rem;
+                    display: block;
+
+                    border-radius: 50%;
+                    background-color: $vinho;
+
+                    position: absolute;
+                    left: 0;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+            }
+        }
+    }
+}
+
+.faleconosco {
+    h3 {
+        text-align: center;
+        font-size: 7rem;
+        color: #A53A1D;
+        margin: 15rem 0 7rem;
+    }
+
+    .wpcf7-form p {
+        text-align: center;
+    }
+
+    &__input {
+        width: 50%;
+        height: 10rem;
+        border-radius: 0;
+        border: 1px solid $marrom;
+        color: $marrom;
+        margin-bottom: 4rem;
+        padding: 2rem;
+        font-size: 4rem;
+        outline: none;
+    }
+
+    textarea.faleconosco__input {
+        height: 20rem;
+        resize: vertical;
+    }
+
+    &__submit {
+        width: 20rem;
+        height: 10rem;
+        border-radius: 0;
+        border: 1px solid $marrom;
+        font-size: 4rem;
+        cursor: pointer;
+    }
+}

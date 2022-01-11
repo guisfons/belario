@@ -13,15 +13,13 @@
 <main class="noticias">
     <section class="noticias__bg">
         <div class="noticias__bg--slider">
-            <?php if( get_field('imagem') ): ?>
-                <img src="<?php the_field('imagem'); ?>" />
-            <?php endif; ?>
-            <?php if( get_field('imagem_2') ): ?>
-                <img src="<?php the_field('imagem_2'); ?>" />
-            <?php endif; ?>
-            <?php if( get_field('imagem_3') ): ?>
-                <img src="<?php the_field('imagem_3'); ?>" />
-            <?php endif; ?>
+            <?php
+            if( have_rows('imagens') ):
+                while( have_rows('imagens') ) : the_row();
+                    echo '<img src=' . get_sub_field('imagem') . '>';
+                endwhile;
+            endif;
+            ?>
         </div>
         <div class="noticias__bg--title">
             <h2>Blog</h2>
